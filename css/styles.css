@@ -1,0 +1,42 @@
+:root { 
+    /* colores principales */
+--color-fondo: #0B0F16;
+--color-panel: #111824;
+--color-cyan: #52F7FF;
+--color-rojo: #FF4545;
+--color-violeta: #C5A7FF;
+/* textos */
+--color-texto: #E8EDF4;
+--color-texto-secundario: #8495AD;
+/* tarjetas */
+--color-tarjeta: #FFFFFF;
+}
+
+/* Lo principal */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-panel);
+    color: var(--color-cyan);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* encabezado */
+header {
+    background-color: var(--color-panel);
+    padding: 24px;
+    border-bottom: 2px solid var(--color-cyan);
+}
+
+header h1 {
+    color: var(--color-cyan);
+    margin: 0;
+    letter-spacing: 3px;
+}
+
+header p {
+    color: var(--color-texto-secundario);
+}
