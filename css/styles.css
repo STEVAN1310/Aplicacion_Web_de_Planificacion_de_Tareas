@@ -9,7 +9,7 @@
 --color-texto: #E8EDF4;
 --color-texto-secundario: #8495AD;
 /* tarjetas */
---color-tarjeta: #FFFFFF;
+--color-tarjeta: #182333;
 }
 
 /* Lo principal */
@@ -19,8 +19,8 @@
 
 body {
     margin: 0;
-    background-color: var(--color-panel);
-    color: var(--color-cyan);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -39,4 +39,44 @@ header h1 {
 
 header p {
     color: var(--color-texto-secundario);
+}
+
+/* Lista de misiones */
+#ListaMisiones{
+    padding: 20px;
+}
+
+/* Tarjetas de misiones */
+.card-mision {
+    background-color: var(--color-tarjeta);
+    border: 2px solid var(--color-cyan);
+    border-radius: 15px;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.separador-mision {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background-color: var(--color-cyan);
+    opacity: 0.8;
+    margin: 20px 0;
+}
+/* Titulo de la mision */
+.card-mision .card-title {
+    color: var(--color-cyan);
+}
+
+.card-mision .card-text {
+    color: var(--color-texto-secundario);
+}
+
+.card-mision p {
+    font-size: 15px;
+}
+
+.card-mision .card-body {
+    border-radius: 13px;
 }

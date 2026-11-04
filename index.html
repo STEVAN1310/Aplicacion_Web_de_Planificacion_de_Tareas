@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UFT-8">
+    <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GOD OF TASKS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    
 </head>
 
 <body>
@@ -14,7 +16,7 @@
         <p>Conquista tus misiones diarias</p>
 
         <nav>
-            <a href="#Incio">Inicio</a>
+            <a href="#Inicio">Inicio</a>
             <a href="#Misiones">Misiones</a>
             <a href="#Progreso">Progreso</a>
             <a href="#Estadisticas">Estadisticas</a>
@@ -25,7 +27,63 @@
     <section id="Misiones">
         <h2>Misiones de hoy</h2>
         <button id="btnNuevaMision">+ Nueva misión</button>
-        <div id="ListaMisiones"></div>
+
+        <div id="ListaMisiones" class="container">
+            <div class="row">
+            <div class="col-md-6 col-lg-6">
+            <div class="card card-mision">
+            <div class="card-body">
+                <h5 class="card-title">Derrotar al jefe final</h5>
+                <p>Completar el desafio final y derrotar al enemigo del reino</p>
+                <div class="separador-mision"></div>
+                <p><strong>Fecha de entrega:</strong> 05/11/2026</p>
+                <span class="badge bg-success">Completada</span>
+            </div>
+            </div>
+            </div>
+
+            <!-- Tarea 2 -->
+            <div class="col-md-6 col-lg-6">
+          <div class="card card-mision">
+            <div class="card-body">
+                <h5 class="card-title">Entrenar al guerrero</h5>
+                <p>Completar el desafio final y derrotar al enemigo del reino</p>
+                <div class="separador-mision"></div>
+                <p><strong>Fecha de entrega:</strong> 06/11/2026</p>
+                <span class="badge bg-success">En progreso</span>
+            </div>
+            </div>
+            </div>
+
+           <!-- Tarea 3 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card card-mision">
+            <div class="card-body">
+                <h5 class="card-title">Explorar el reino</h5>
+                <p>Descubrir nuevas zonas y encontrar objetos especiales.</p>
+                <div class="separador-mision"></div>
+                <p><strong>Fecha de entrega:</strong> 07/11/2026</p>
+                <span class="badge bg-success">Pendiente</span>
+            </div>
+            </div>
+            </div>
+ 
+            <!-- Tarea 4 -->
+        <div class="col-md-6 col-lg-6">
+          <div class="card card-mision">
+            <div class="card-body">
+                <h5 class="card-title">Recolectar recursos</h5>
+                <p>Conseguir materiales para mejorar el equipamiento.</p>
+                <div class="separador-mision"></div>
+                <p><strong>Fecha de entrega:</strong> 08/11/2026</p>
+                <span class="badge bg-success">Pendiente</span>
+            
+            </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
     </section>
 
 <section id="Progreso">
@@ -35,7 +93,7 @@
 </section>
 
 <section id="Estadisticas">
-    <h2>Estadiosticas semanales</h2>
+    <h2>Estadisticas semanales</h2>
     <p>Misiones completadas: 0</p>
 </section>
 </main>
