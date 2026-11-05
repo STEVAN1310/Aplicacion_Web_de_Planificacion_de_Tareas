@@ -38,7 +38,13 @@ La interfaz combina dos estilos visuales:
 
 ## 🚧 Estado del proyecto
 
-Actualmente, el proyecto se encuentra en la fase de diseño del wireframe y definición de funcionalidades.
+El proyecto se encuentra en fase de desarrollo. Actualmente cuenta con una interfaz web, tarjetas de misiones, un formulario para registrar tareas y validación de campos mediante JavaScript.
+
+Se continuará trabajando en nuevas funcionalidades para mejorar la experiencia de usuario.
+
+🚀 Deploy GOD OF TASKS aquí!
+
+🔗 Ver GOD OF TASKS en GitHub Pages
 
 ## 👨‍💻 Autor
 
