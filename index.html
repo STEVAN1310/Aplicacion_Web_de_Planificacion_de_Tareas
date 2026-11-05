@@ -24,12 +24,47 @@
     </header>
 
 <main id="Inicio">
-    <section id="Misiones">
-        <h2>Misiones de hoy</h2>
-        <button id="btnNuevaMision">+ Nueva misión</button>
+    <section id="Misiones" class="container my-4">
+        <button id="btnNuevaMision" class="btn btn-info mb-3">
+            + Nueva Misión
+        </button>
+        <section id="FormularioMision" class="container my-4 d-none">
+    <h3 class="text-cyan">Crear Nueva Misión</h3>
+    
+    <!-- Alerta de Bootstrap para errores (inicialmente oculta con d-none) -->
+    <div id="alertError" class="alert alert-danger d-none" role="alert">
+        Por favor completa todos los campos correctamente.
+    </div>
+
+    <form id="taskForm" novalidate>    
+        <div class="mb-3">
+            <label for="newTaskNameInput" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="newTaskNameInput" required>
+        </div>
+        <div class="mb-3">
+            <label for="newTaskDescriptionInput" class="form-label">Descripción</label>
+            <textarea class="form-control" id="newTaskDescriptionInput" rows="2" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="newTaskDateInput" class="form-label">Fecha de entrega</label>
+            <input type="date" class="form-control" id="newTaskDateInput" required>
+        </div>
+        <div class="mb-3">
+            <label for="newTaskStatusInput" class="form-label">Estado</label>
+            <select class="form-select" id="newTaskStatusInput" required>
+                <option value="" selected disabled>Selecciona una opción</option>
+                <option value="Pendiente">Pendiente</option>
+                <option value="En progreso">En progreso</option>
+                <option value="Completada">Completada</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-info">Guardar Misión</button>
+    </form>
+</section>
 
         <div id="ListaMisiones" class="container">
             <div class="row">
+            <!-- Tarea 1 -->
             <div class="col-md-6 col-lg-6">
             <div class="card card-mision">
             <div class="card-body">
@@ -54,35 +89,8 @@
             </div>
             </div>
             </div>
-
-           <!-- Tarea 3 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card card-mision">
-            <div class="card-body">
-                <h5 class="card-title">Explorar el reino</h5>
-                <p>Descubrir nuevas zonas y encontrar objetos especiales.</p>
-                <div class="separador-mision"></div>
-                <p><strong>Fecha de entrega:</strong> 07/11/2026</p>
-                <span class="badge bg-success">Pendiente</span>
             </div>
             </div>
-            </div>
- 
-            <!-- Tarea 4 -->
-        <div class="col-md-6 col-lg-6">
-          <div class="card card-mision">
-            <div class="card-body">
-                <h5 class="card-title">Recolectar recursos</h5>
-                <p>Conseguir materiales para mejorar el equipamiento.</p>
-                <div class="separador-mision"></div>
-                <p><strong>Fecha de entrega:</strong> 08/11/2026</p>
-                <span class="badge bg-success">Pendiente</span>
-            
-            </div>
-            </div>
-            </div>
-        </div>
-        </div>
 
     </section>
 
@@ -97,5 +105,6 @@
     <p>Misiones completadas: 0</p>
 </section>
 </main>
+<script src="app.js"></script>
 </body>
 </html>
