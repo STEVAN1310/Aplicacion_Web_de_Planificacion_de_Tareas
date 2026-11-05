@@ -44,7 +44,7 @@ Se continuará trabajando en nuevas funcionalidades para mejorar la experiencia 
 
 🚀 Deploy GOD OF TASKS aquí!
 
-🔗 Ver GOD OF TASKS en GitHub Pages
+[🔗(https://stevan1310.github.io/Aplicacion_Web_de_Planificacion_de_Tareas/)]
 
 ## 👨‍💻 Autor
 
