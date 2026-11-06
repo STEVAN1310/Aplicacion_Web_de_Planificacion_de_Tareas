@@ -1,10 +1,8 @@
-// Función de validación requerida
 function validFormFieldInput(data) {
-    // data puede ser un objeto con los valores del formulario
     if (!data.name || !data.description || !data.date || !data.status) {
-        return false; // Hay errores / campos vacíos
+        return false; 
     }
-    return true; // Todo correcto
+    return true; 
 }
 
 // Capturar el envío del formulario
@@ -21,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (taskForm) {
         taskForm.addEventListener("submit", (event) => {
-            event.preventDefault(); // Evita que se recargue la página por defecto
+            event.preventDefault();
 
             // Obtener los valores usando los id del HTML
             const name = document.querySelector("#newTaskNameInput").value.trim();
@@ -29,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const date = document.querySelector("#newTaskDateInput").value;
             const status = document.querySelector("#newTaskStatusInput").value;
 
-            // Comprobar datos en consola (como indica la guía)
+            // Comprobar datos en consola 
             console.log("name: " + name);
             console.log("description: " + description);
             console.log("date: " + date);
