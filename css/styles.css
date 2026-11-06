@@ -80,3 +80,30 @@ header p {
 .card-mision .card-body {
     border-radius: 13px;
 }
+
+.mision-item {
+    background-color:  var(--color-tarjeta);
+    color: var(--color-texto);
+    border: 1px solid var(#52F7FF);
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 15px;
+}
+
+/* casilla de mision */
+.mision-item input[type="checkbox"]{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #52F7FF;
+    border-radius: 50px;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+/* cuando la mision este completada */
+.mision-item input[type="checkbox"]:checked {
+    background-color: #52F7FF;
+    box-shadow: 0 0 10px #52F7FF;
+}
