@@ -16,6 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
     let misionesGuardadas = JSON.parse(localStorage.getItem("misiones")) || [];
 
     function crearMision(data){
+        // Boton para eliminar misiones
+        const btnEliminar = document.createElement("button");
+        btnEliminar.textContent = "Eliminar";
+        btnEliminar.classList.add("btn", "btn-sm", "btn-outline-danger");
+// Dectectar el click
+        btnEliminar.addEventListener("click", () => {
+            const confirmar = confirm("¿Seguro que deseas eliminar esta misión?");
+
+            if (confirmar) {
+               const posicion = misionesGuardadas.indexOf(data);
+                misionesGuardadas.splice(posicion, 1);
+                localStorage.setItem("misiones", JSON.stringify(misionesGuardadas));
+
+                mision.remove();
+            }
+        })
+
         const mision = document.createElement("div");
         mision.classList.add("mision-item");
         
@@ -27,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // nombre de la mision
         const nombre = document.createElement("span");
         nombre.textContent = data.name;
+        nombre.classList.add("nombre-mision");
         const estado = document.createElement("span");
         estado.textContent = data.status;
         estado.classList.add("badge", "bg-info", "ms-2");
@@ -40,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
         fecha.textContent = "Fecha de entrega: " + data.date;
 
         // Agregar elementos a la mision
-        mision.append(checkbox, nombre, estado, descripcion, fecha);
+        mision.append(checkbox, nombre, estado, descripcion, fecha, btnEliminar);
 
         // Agregar la mision al contenedor
         contenedorMisiones.appendChild(mision);
@@ -52,13 +70,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Detectar cuando se marca o desmarca la casilla
         checkbox.checked = data.status === "Completada";
+        if(checkbox.checked){
+            mision.classList.add("mision-completada");
+        }
 
          checkbox.addEventListener("change", () =>{
             if(checkbox.checked){
+                mision.classList.add("mision-completada");
                 estado.textContent = "Completada";
                 estado.classList.remove("bg-info");
                 estado.classList.add("bg-success");
             }else {
+                mision.classList.remove("mision-completada");
                 estado.textContent = "Pendiente";
                 estado.classList.remove("bg-success");
                 estado.classList.add("bg-info");
